@@ -13,17 +13,17 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Variables Naming Rules
-      id: variables-naming-rules
+    - name: Naming rules
+      id: naming-rules
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Variables Naming Rules
+        test-name: Naming rules
         setup-command: npm install
         command: npm test
         timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        VARIABLES-NAMING-RULES_RESULTS: "${{steps.variables-naming-rules.outputs.result}}"
+        NAMING-RULES_RESULTS: "${{steps.naming-rules.outputs.result}}"
       with:
-        runners: variables-naming-rules
+        runners: naming-rules
