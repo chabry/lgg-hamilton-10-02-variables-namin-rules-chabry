@@ -10,7 +10,8 @@ function validVariableName() {
 // Function 2
 function invalidVariableName() {
   // Your code here
-  return ZOULOU = "123"
+  const ZOULU = "aber";
+  return ZOULU
 }
 
 // Function 3
